@@ -1,0 +1,160 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+}
+.team-section .team-header {
+  background-color: #3b5998;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+.team-section .team-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  animation: slide-up 0.5s ease forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+.team-section .team-header h2 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: normal;
+  animation: slide-up 0.5s ease forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+.team-section .team-content {
+  display: flex;
+  padding: 3rem;
+  justify-content: space-between;
+}
+.team-section .team-content .team-image1,
+.team-section .team-content .team-image2 {
+  position: relative;
+}
+.team-section .team-content .team-image1 img,
+.team-section .team-content .team-image2 img {
+  width: 100%;
+  height: auto;
+}
+.team-section .team-content .team-image2 {
+  position: absolute;
+  bottom: 100px;
+  left: 450px;
+  z-index: 1;
+}
+.team-section .team-content .team-info {
+  max-width: 50%;
+  padding-left: 2rem;
+}
+.team-section .team-content .team-info h3 {
+  color: #4caf50;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.team-section .team-content .team-info h4 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #3b5998;
+}
+.team-section .team-content .team-info p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.team-section .team-content .team-info .features .feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.team-section .team-content .team-info .features .feature-item .icon-container {
+  background-color: #4caf50;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+.team-section .team-content .team-info .features .feature-item .icon-container i {
+  font-size: 30px;
+  color: #fff;
+}
+.team-section .team-content .team-info .features .feature-item .text-container p {
+  margin: 0;
+  color: #333;
+}
+.team-section .team-content .team-info .features .feature-item .text-container strong {
+  display: block;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #3b5998;
+}
+.team-section .team-content .team-info .team-members {
+  display: flex;
+  align-items: center;
+}
+.team-section .team-content .team-info .team-members .member-images {
+  display: flex;
+}
+.team-section .team-content .team-info .team-members .member-images img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: -10px;
+  border: 1px solid white;
+}
+.team-section .team-content .team-info .team-members p {
+  margin-left: 30px;
+  color: #333;
+  font-size: 2rem;
+}
+.team-section .team-content .team-info .team-members p strong {
+  color: #3b5998;
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.team-image1 {
+  animation: slide-left 0.5s ease forwards;
+  opacity: 0;
+}
+.team-info {
+  animation: slide-right 0.5s ease forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+.team-image2 {
+  animation: slide-up 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}

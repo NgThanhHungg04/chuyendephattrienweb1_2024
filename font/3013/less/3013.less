@@ -1,0 +1,178 @@
+// Define colors
+@primary-blue: #3b5998;
+@green: #4caf50;
+@dark-text: #333;
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+}
+
+.team-section {
+    .team-header {
+        background-color: @primary-blue;
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            animation: slide-up 0.5s ease forwards;
+            opacity: 0;
+            animation-delay: 0.3s; // Delay for main title
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 0;
+            font-weight: normal;
+            animation: slide-up 0.5s ease forwards;
+            opacity: 0;
+            animation-delay: 0.5s; // Delay for subtitle
+        }
+    }
+
+    .team-content {
+        display: flex;
+        padding: 3rem;
+        justify-content: space-between;
+
+        .team-image1, .team-image2 {
+            position: relative;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .team-image2 {
+            position: absolute;
+            bottom: 100px;
+            left: 450px;
+            z-index: 1;
+        }
+
+        .team-info {
+            max-width: 50%;
+            padding-left: 2rem;
+
+            h3 {
+                color: @green;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+            }
+
+            h4 {
+                font-size: 4rem;
+                font-weight: bold; 
+                margin-bottom: 1rem;
+                color: @primary-blue;
+            }
+
+            p {
+                color: @dark-text;
+                line-height: 1.6;
+                margin-bottom: 2rem;
+            }
+
+            .features {
+                .feature-item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1.5rem;
+            
+                    .icon-container {
+                        background-color: @green; /* Sử dụng biến cho nhất quán */
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 15px;
+            
+                        i {
+                            font-size: 30px;
+                            color: #fff;
+                        }
+                    }
+            
+                    .text-container {
+                        p {
+                            margin: 0;
+                            color: @dark-text;
+                        }
+                        strong {
+                            display: block;
+                            font-weight: bold;
+                            font-size: 2rem;
+                            color: @primary-blue; /* Màu tùy chọn cho chữ "Fast Turnaround Time" */
+                        }
+                    }
+                }
+            }
+            
+
+            .team-members {
+                display: flex;
+                align-items: center;
+
+                .member-images {
+                    display: flex;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        margin-right: -10px;
+                        border: 1px solid white;
+                    }
+                }
+
+                p {
+                    margin-left: 30px;
+                    color: @dark-text;
+                    font-size: 2rem;
+
+                    strong {
+                        color: @primary-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Animation Keyframes
+@keyframes slide-up {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-left {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-right {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+// Apply animations to images and text
+.team-image1 {
+    animation: slide-left 0.5s ease forwards;
+    opacity: 0;
+}
+
+.team-info {
+    animation: slide-right 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 0.3s; // Delay for text
+}
+
+.team-image2 {
+    animation: slide-up 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.5s; // Delay for small image
+}
